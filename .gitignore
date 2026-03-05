@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Flask runtime directories (populated at runtime; not committed)
+uploads/
+generated/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# OS files
+.DS_Store
+Thumbs.db
