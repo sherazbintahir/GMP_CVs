@@ -1,0 +1,195 @@
+/* =========================================================
+   GMP CV Generator – Stylesheet
+   ========================================================= */
+
+:root {
+  --gmp-dark-blue: #003366;
+  --gmp-mid-blue:  #005B99;
+  --gmp-accent:    #0077CC;
+  --gmp-light:     #F4F6F8;
+  --gmp-border:    #D1D9E0;
+  --gmp-text:      #222222;
+  --gmp-muted:     #666666;
+  --radius:        8px;
+  --shadow:        0 2px 12px rgba(0,0,0,.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--gmp-light);
+  color: var(--gmp-text);
+  line-height: 1.6;
+}
+
+/* ---- Header ---- */
+.site-header {
+  background: var(--gmp-dark-blue);
+  color: #fff;
+  padding: 0 2rem;
+}
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #fff;
+  background: var(--gmp-accent);
+  padding: .2rem .6rem;
+  border-radius: 4px;
+}
+.site-header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+/* ---- Main container ---- */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* ---- Card ---- */
+.card {
+  background: #fff;
+  border: 1px solid var(--gmp-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.card h2 {
+  margin-top: 0;
+  color: var(--gmp-dark-blue);
+}
+.subtitle {
+  color: var(--gmp-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* ---- Alerts ---- */
+.alert {
+  padding: .8rem 1.2rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.alert-success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.alert-error   { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+/* ---- Drop zone ---- */
+.drop-zone {
+  border: 2px dashed var(--gmp-border);
+  border-radius: var(--radius);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+.drop-zone:hover,
+.drop-zone.drag-over {
+  border-color: var(--gmp-accent);
+  background: #EBF4FF;
+}
+.upload-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--gmp-mid-blue);
+  margin-bottom: .5rem;
+}
+.drop-zone p { margin: .3rem 0; color: var(--gmp-muted); }
+.hint        { font-size: .85rem; }
+.drop-zone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.browse-link {
+  color: var(--gmp-accent);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.selected-file {
+  color: var(--gmp-mid-blue);
+  font-weight: 600;
+  margin-top: .5rem !important;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-block;
+  padding: .65rem 1.4rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: background .2s, box-shadow .2s;
+}
+.btn-primary {
+  background: var(--gmp-dark-blue);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--gmp-mid-blue);
+  box-shadow: 0 4px 14px rgba(0,51,102,.3);
+}
+.btn-secondary {
+  background: var(--gmp-light);
+  color: var(--gmp-dark-blue);
+  border: 1px solid var(--gmp-border);
+}
+.btn-secondary:hover {
+  background: #e0e8f0;
+}
+
+/* ---- Action row ---- */
+.action-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+/* ---- PDF preview iframe ---- */
+.pdf-preview {
+  border: 1px solid var(--gmp-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.pdf-preview iframe { display: block; }
+
+/* ---- How-it-works steps ---- */
+.steps {
+  padding-left: 1.4rem;
+  margin: 0;
+}
+.steps li {
+  margin-bottom: .6rem;
+  color: var(--gmp-text);
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--gmp-muted);
+  font-size: .85rem;
+}
